@@ -77,8 +77,57 @@
         echo "Vi kan nu använda PI i våra beräkningar " . PI . "<br>";
     ?>
     </p>
-    
 
+    <h2>Listor (arrayer)</h2>
+
+    $nummer = [ 1, 6, 9, 2, 9, 5 ];<br>
+    
+    <?php
+        $nummer = [ 1, 6, 9, 2, 9, 5 ];
+        echo "På index nummer fyra finns: $nummer[4]<br>"
+    ?>
+
+    print_r($nummer); -- kan vara bra för felsökning<br>
+    <?php
+        print_r($nummer);
+    ?>
+    
+    <h3>En associativ lista (nycklar)</h3>
+    
+    <?php
+
+        $bil = [
+            'brand' => 'Suzuki',
+            'model' => 'Samurai',
+            'year' => 1986,
+            'bestCar' => true
+        ];
+        
+    ?>
+    Världens bästa bil är en <?= $bil['brand'] ?> <?= $bil['model'] ?>! <br>
+
+    <h3>LIFO-kö</h3>
+    LIFO = First In First Out<br>
+    <?php
+        $fifo = [];
+
+        array_push($fifo, $bil);
+        array_push($fifo, 'En Volvo');
+        print_r($fifo);
+
+        $sistaElementet = array_pop($fifo);
+        echo "Vi hämtade $sistaElementet<br>";
+        print_r($fifo);
+
+    ?>
+
+    <h2>Super Globaler</h2>
+
+    $_SERVER, $GET
+
+    <?php
+        print_r($_GET);
+    ?>
 
 
 </body>
