@@ -4,7 +4,7 @@
         $_POST['count']++; 
 
         if($_POST['count'] > 5) {
-            header('Location: /Lektion04/');
+            header('Location: /Lektion04/error.php?message=Too+many+requests');
             die();
         }
 
