@@ -2,7 +2,10 @@ version: '3.8'
 
 services:
   php:
-    image: php:8.2-apache
+#    image: php:8.2-apache
+    build:
+        context: .
+        dockerfile: mysql.dockerfile
     container_name: php-container
     volumes:
       - ./src:/var/www/html
